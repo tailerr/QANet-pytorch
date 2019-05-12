@@ -1,0 +1,39 @@
+model_params:
+  emb_word_size: 300
+  emb_char_size: 200
+  model_dim: 128
+  kernel_size: 7
+  num_heads: 8
+  block_num: 1
+  max_pass_len: 400
+  max_ques_len: 50
+  grad_clip: 5.0
+  ema_decay: 0.9999
+  pretrained_char: False
+  ch_dropout: 0.05
+  w_dropout: 0.1
+
+launch_params:
+  learning_rate: 0.0001
+  num_steps: 500000
+  fine_tuning_steps: 500000
+  batch_size: 16
+  test_interval: 150
+  train_interval: 10
+  train_sample_interval: 150
+  log: logs
+  prefix: QANet
+  lr_warm_up_num: 1000
+  test_num_batches: 50
+  val_num_batches: 50
+  word_emb_file: target_dir/word_emb.json
+  char_emb_file: target_dir/char_emb.json
+  train_eval_file: target_dir/train_eval.json
+  dev_eval_file: target_dir/dev_eval.json
+  train_record_file: target_dir/train.npz
+  dev_record_file: target_dir/dev.npz
+  word2ind_file: target_dir/word2idx.json
+  ema_decay: 0.9999
+  beta1: 0.8
+  beta2: 0.999
+  epochs: 10

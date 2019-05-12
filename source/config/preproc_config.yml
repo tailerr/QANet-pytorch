@@ -1,0 +1,19 @@
+target_dir: target_dir
+
+train_file: dataset/train-v1.1.json
+dev_file: dataset/dev-v1.1.json
+glove_word_file: dataset/glove.840B.300d.txt
+glove_char_file: None
+train_record_file: target_dir/train.npz
+dev_record_file: target_dir/dev.npz
+word_emb_file: target_dir/word_emb.json
+char_emb_file: target_dir/char_emb.json
+train_eval_file: target_dir/train_eval.json
+dev_eval_file: target_dir/dev_eval.json
+word2idx_file: target_dir/word2idx.json
+char2idx_file: target_dir/char2idx.json
+dev_meta_file: target_dir/answer.json
+
+pretrained_char: False
+glove_dim: 300
+char_dim: 200
